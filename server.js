@@ -138,23 +138,13 @@ app.post('/api/sendMessage5', async (req, res) => {
     }
 });
 
-const keepAliveUrl = 'https://luxuriant-sugared-titaniums.onrender.com/';
+const keepAliveUrl = 'https://lapetitesona.onrender.com/';
 
 setInterval(() => {
     axios.get(keepAliveUrl)
         .then(response => console.log(`Ping exitoso: ${new Date().toLocaleTimeString()}`))
         .catch(error => console.error(`Error en el ping: ${error.message}`));
 }, 180000); // 180000 ms = 3 minutos
-
-
-const FRONTEND_URL = "htasdasd/"; // Reemplaza con la URL de tu frontend
-
-// Función para hacer ping al frontend cada 5 minutos
-setInterval(() => {
-    axios.get(FRONTEND_URL)
-        .then(() => console.log(`Ping enviado a ${FRONTEND_URL}`))
-        .catch(err => console.log("Error en el ping:", err.message));
-}, 180000);
 
 
 
